@@ -4,6 +4,144 @@
 <meta charset="utf-8">
 <title>Flex</title>
 	<style>
+		
+		h1{
+    font-family:verdana;
+    font-weight:normal;
+    text-transform:lowercase;
+    color:#43319;
+    font-size:24px;
+    letter-spacing:2px;
+}
+
+h4{
+    font-family:verdana;
+    font-weight:normal;
+    text-transform:uppercase;
+    color:#43319;
+    font-size:18px;
+
+}
+.btn{
+    display:inline-block;
+    background: #7969c2;
+    padding:  10px; 20px 
+    text-transfrom: lowercase;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 10px;
+}
+
+btn:hover{
+    background: #c5baf5
+    color: #433191;
+    box-shadow: 2px 2px 5px 2px rgba(0,0,0,.2)
+}
+
+img{
+    
+    max-width:100%;}
+
+/*navigation appears throughout the website and should be styled early in the project*/
+header{
+    border-bottom:1px dotted #c5baf5;
+}
+header img{
+    width:100px;
+    padding:10px;
+}
+
+nav{
+    position:absolute;
+    right:20px;
+    top:35px;
+}
+nav ul{
+    list-style: none;
+}
+
+nav li{
+    display:inline-block;
+}
+
+nav a{
+    text-decoration: none;
+    color:#7969c2;
+    border: 1px dotted #c5baf5;
+    padding:7px 12px;
+    border-radius: 10px;
+}
+
+nav a:hover{
+    color: #433191;
+    border:1px dotted #433191;
+        box-shadow: 2px 2px 5px 2px rgba(0,0,0,.2)
+}
+    /*hero*/
+#hero{
+    background: url(../img/bg.jpg);
+    background-size: cover;
+    background-position:center center;
+    height:calc(100vh - 90px);
+}
+.overlay{
+height:100%;
+    background:linear-gradient(rgba(255,255,255,0),rgba 197 ,186,245,.85),rgba 197,186,245,0);
+    display:flex;
+    align-items: center;
+    /*top and bottom padding requires only 2 designations for both margin types*/
+    padding:0px 50px;
+}
+.overlay div{
+    text-align:center;
+    width:100%;
+}
+.overlay h1, .overlay #port p{
+    margin-bottom: 10px;
+}
+    
+    /* portfolio and column grid*/
+
+#port{
+    magin:20px auto;
+    max-width:850px;
+    text-align:center;
+}
+
+.container:after{
+    content: '';
+    display:block;
+    clear:both;
+}
+.col{
+    float:left;
+    padding:10px;
+}
+.c3{
+    width:33.3333%;
+}
+    
+.col img{
+    border-radius:50%;
+    border:2px solid c5baf5;
+}
+/*cts*/
+#cta{
+    background:#433191;
+    padding:20px  0px;
+}
+#cta h1{
+    color:#fff;
+}
+/*footer*/
+footer{
+    background:#000;
+}
+footer p{
+    color:#ffff;
+    text-align: center;
+    padding: 20px;
+}
 		.container-1{display:flex;
 			margin-left: 1px;
 			background:#6ad;
@@ -37,10 +175,9 @@
 		text-align:center;
 		display:flex;
 	
-		flex-wrap:wrap;
 		justify-content:left;
-		align-items:center;
-		align-content: center;
+		align-items:left;
+		align-content: left;
 		height:10vh;		
 		}
 				
@@ -57,326 +194,92 @@
 		.container-2box-2{
 			flex:12;
 		}
-		.container-3{display:flex;
-			margin-left: 1px;
-			background:#6ad;
-		text-align:center;
-		display:flex;
 	
-		flex-wrap:wrap;
-		justify-content:left;
-		align-items:center;
-		align-content: center;
-		height:10vh;		
-		}
-				
-		.container-3 div
-		{
-				border: 1px #0F0F01 solid;
-				padding:1px;
-			}
-		
-		.container-3box-1{
-			flex:4;	
-			
-		}
-		.container-3box-2{
-			flex:12;
-			
-		}
-		
-		.container-4{display:flex;
-			margin-left: 1px;
-			background:#6ad;
-		text-align:center;
-		display:flex;
-	
-		flex-wrap:wrap;
-		justify-content:left;
-		align-items:center;
-		align-content: center;
-		height:10vh;		
-		}
-				
-		.container-4 div
-		{
-				border: 1px #0F0F01 solid;
-				padding:1px;
-			}
-		
-		.container-4box-1{
-			flex:5;	
-			
-		}
-		.container-4box-2{
-			flex:12;
-			
-		}
-		
-		.container-5{display:flex;
-			margin-left: 1px;
-			background:#6ad;
-		text-align:center;
-		display:flex;
-	
-		flex-wrap:wrap;
-		justify-content:left;
-		align-items:center;
-		align-content: center;
-		height:10vh;		
-		}
-				
-		.container-5 div
-		{
-				border: 1px #0F0F01 solid;
-				padding:1px;
-			}
-		
-		.container-5box-1{
-			flex:6;	
-			
-		}
-		.container-5box-2{
-			flex:12;
-			
-		}
-		
-		.container-6{display:flex;
-			margin-left: 1px;
-			background:#6ad;
-		text-align:center;
-		display:flex;
-	
-		flex-wrap:wrap;
-		justify-content:left;
-		align-items:center;
-		align-content: center;
-		height:10vh;		
-		}
-				
-		.container-6 div
-		{
-				border: 1px #0F0F01 solid;
-				padding:1px;
-			}
-		
-		.container-6box-1{
-			flex:6;	
-			
-		}
-		.container-6box-2{
-			flex:6;
-			
-		}
-		
-		.container-7{display:flex;
-			margin-left: 1px;
-			background:#6ad;
-		text-align:center;
-		display:flex;
-	
-		flex-wrap:wrap;
-		justify-content:left;
-		align-items:center;
-		align-content: center;
-		height:10vh;		
-		}
-				
-		.container-7 div
-		{
-				border: 1px #0F0F01 solid;
-				padding:1px;
-			}
-		
-		.container-7box-1{
-			flex:4;	
-			
-		}
-		.container-7box-2{
-			flex:4;
-			
-		}
-		.container-7box-3{
-			flex:4;	
-			
-		}
-		
-		.container-8{display:flex;
-			margin-left: 1px;
-			background:#6ad;
-		text-align:center;
-		display:flex;
-	
-		flex-wrap:wrap;
-		justify-content:left;
-		align-items:center;
-		align-content: center;
-		height:10vh;		
-		}
-				
-		.container-8 div
-		{
-				border: 1px #0F0F01 solid;
-				padding:1px;
-			}
-		
-		.container-8box-1{
-			flex:3;	
-			
-		}
-		.container-8box-2{
-			flex:3;
-			
-		}
-		.container-8box-3{
-			flex:3;
-			
-		}
-		.container-8box-4{
-			flex:3;
-			
-		}
-		
-		.container-9{display:flex;
-			margin-left: 1px;
-			background:#6ad;
-		text-align:center;
-		display:flex;
-	
-		flex-wrap:wrap;
-		justify-content:left;
-		align-items:center;
-		align-content: center;
-		height:10vh;		
-		}
-				
-		.container-9 div
-		{
-				border: 1px #0F0F01 solid;
-				padding:1px;
-			}
-		
-		.container-9box-1{
-			flex:12;	
-			
-		}
-		.container-9box-2{
-			flex:12;
-		}
-		.container-9box-3{
-			flex:12;}
-		.container-9box-4{
-			flex:12;}
-		.container-9box-5{
-			flex:12;}
-		.container-9box-6{
-			flex:12;}
-		
-		
-		
 		
 	</style></head>
+
 	
 	<body>	
-<div class="container-1">
+		
+	<header>
+		<img src="assets/logo.png">
+		<nav>
+			<ul>
+				<li><a href="index.html">CREATE A POST</a></li>
+				<li><a href="index.html#port">MY ACCOUNT</a></li>
+				<li><a href="contact.html">EVENT CALENDAR</a></li>
+			</ul>
+		</nav>
+		</header>
+		<div class="container-1">
   <div class="box-1">
-			<p>CRAIGSLST NEW YORK</p>
-        </div>
-		<div class="box-2">
-		<p> <ul>
-				<li><a href="index.html">HOME</a></li>
-				<li><a href="index.html#port">PORTFOLIO</a></li>
-				<li><a href="contact.html">CONTACT</a></li>
+			<p> <ul>
+				<a href="index.html">HOME</a>
+				<a href="index.html#port">JOB LISTING</a>
+				<a href="contact.html">HOUSING</a>
+			    <a href="index.html">HOME REPAIRS</a>
+				<a href="index.html#port">COMMUNITY</a>
+				<a href="contact.html">SERVICES</a>
 			</ul></p>
+        </div>
+		</div>
+		</div>
+		<div id="hero">
+					<div class="overlay"><img src="assets/82191629444969.55f3090409b21.jpg">
+            <div>
+			<h1>My Promise</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<p><a href="contact.html" class="btn">Contact Me</a></p>
+            </div></div>
+		</div>
+	</div>
+	
+		</div>
+
+		<div class="box-2">
+			
+		<!---CONTENT PLACEHOLDER --->
+			
 		</div>
 	</div>
 	<div class="container-2">
   <div class="container-2box-1">
 			<p> 1/6</p>
-        </div>
-		<div class="container-2box-2">
-		<p> 5/6</p>
+   <form>
+            <label>First Name<br><input type="text"name="fn" placeholder "Subscribe Now" value required>
+            </label>
+            <br><label>Last Name<br><input type="text" name="ln" required>
+            </label>
+            <br>
+            <label>Email<br>
+                <input type="password"name="pw" required>
+                    </label>
+               
+                <br>
+                <p>Preferred Contact</p>
+                <label>
+                    <input type="checkbox"name="ct" value="e">email
+                </label>
+                <label>
+                    <input type="checkbox"name="ct" value="t">telephone
+                </label>
+                <label>
+                    <input type="checkbox" name="ct" value="m">mail
+                </label>
+                <br><p>
+                <label>Message<br>
+                    <textarea name="msg"></textarea>
+                </label>
+                <br>
+                <input type="submit" value="Subscribe Now">
+                </form>     
+		</div>
+		
 		</div>
 		
 	
 	</div>
-  <div class="container-3">
-  <div class="container-3box-1">
-			<p>1/4</p>
-        </div>
-		<div class="container-3box-2">
-		<p> 3/4</p>
-		</div>
-	  
-	</div>
-	  <div class="container-4">
-  <div class="container-4box-1">
-			<p>1/3</p>
-        </div>
-		<div class="container-4box-2">
-		<p> 2/3</p>
-		</div>
-	</div>
-	
-	</div><div class="container-5">
-  <div class="container-5box-1">
-			<p> 5/12</p>
-        </div>
-		<div class="container-5box-2">
-		<p> 7/12</p>
-		</div>
-	</div>
-	
-	  
-<div class="container-6">
-  <div class="container-6box-1">
-			<p> 1/2</p>
-        </div>
-		<div class="container-6box-2">
-		<p>1/2</p>
-		</div>
-	</div>
-<div class="container-7">
-  <div class="container-7box-1">
-			<p>1/3</p>
-        </div>
-		<div class="container-7box-2">
-		<p> 1/3</p>
-		</div><div class="container-7box-3">
-		<p>1/3</p>
-		</div>
-	</div>
-<div class="container-8">
-  <div class="container-8box-1">
-			<p>1/4</p>
-        </div>
-		<div class="container-8box-2">
-		<p> 1/4</p>
-		</div><div class="container-8box-3">
-			<p> 1/4</p>
-        </div>
-		<div class="container-8box-4">
-		<p> 1/4</p>
-		</div>
-	
-	</div><div class="container-9">
-		<div class="container-9box-1">
-			<p> 1/6</p>
-        </div>
-		<div class="container-9box-2">
-		<p> 1/6</p>
-		</div>
-		<div class="container-9box-3">
-			<p> 1/6</p>
-        </div>
-		<div class="container-9box-4">
-		<p>1/6</p>
-		</div>
-		<div class="container-9box-5">
-			<p> 1/6</p>
-        </div>
-		<div class="container-9box-1">
-		<p> 1/6</p>
-	</div></div>
+ 
 </body>
 </html>
+
